@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLightGray">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.v4.view.ViewPager>
+
+        <me.relex.circleindicator.CircleIndicator
+            android:id="@+id/circle_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom|center_horizontal"
+            app:ci_animator="@animator/indicator_animator"
+            app:ci_drawable="@drawable/white_indicator"
+            app:ci_drawable_unselected="@drawable/white_transparent_indicator"
+            app:ci_height="@dimen/size8dp"
+            app:ci_width="@dimen/size8dp"
+            app:ci_margin="3dp"/>
+
+    </FrameLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:minHeight="?attr/actionBarSize"
+        app:tabBackground="@android:color/white"
+        app:tabSelectedTextColor="@android:color/holo_red_light"
+        app:tabTextColor="@android:color/darker_gray"
+        app:elevation="5dp"
+        android:elevation="5dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager_tab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detailtabs" />
+
+</LinearLayout>
